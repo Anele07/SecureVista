@@ -4,107 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SecureVista Consulting | POPIA & Cybersecurity</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
-            },
-            colors: {
-              background: '#0a0502', // Deep Dark Brown/Black
-              surface: '#151110',    // Dark Matte
-              surfaceHighlight: '#1c1817',
-              border: 'rgba(255, 255, 255, 0.08)',
-              brand: {
-                50: '#fff7ed',
-                100: '#ffedd5',
-                200: '#fed7aa',
-                300: '#fdba74',
-                400: '#fb923c',
-                500: '#f97316', // Orange
-                600: '#ea580c',
-                700: '#c2410c',
-                800: '#9a3412',
-                900: '#7c2d12',
-                accent: '#ff4e00', // Vibrant Orange
-              }
-            },
-            backgroundImage: {
-              'atmospheric': 'radial-gradient(circle at 50% -20%, #3a1510 0%, transparent 70%), radial-gradient(circle at 0% 100%, #1a0a05 0%, transparent 50%)',
-              'glow-orange': 'radial-gradient(circle at center, rgba(255, 78, 0, 0.15) 0%, transparent 70%)',
-            },
-            animation: {
-              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              'float': 'float 6s ease-in-out infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' }
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        font-family: 'Inter', sans-serif;
-        scroll-behavior: smooth;
-        background-color: #0a0502;
-        color: #d1d1d1;
-        overflow-x: hidden;
-      }
-      .glass-panel {
-        background: rgba(21, 17, 16, 0.7);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-      }
-      .text-glow-orange {
-        text-shadow: 0 0 30px rgba(255, 78, 0, 0.4);
-      }
-      .heading-huge {
-        font-size: clamp(3rem, 8vw, 6rem);
-        line-height: 0.9;
-        letter-spacing: -0.04em;
-        font-weight: 700;
-      }
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0a0502;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #2a2524;
-        border-radius: 10px;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.41.0",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.564.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <link rel="stylesheet" href="/index.css">
+  </head>
   <body class="bg-background text-slate-300 antialiased selection:bg-brand-500 selection:text-white">
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>
