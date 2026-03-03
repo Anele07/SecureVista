@@ -1,76 +1,79 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Shield, Database, Lock, Globe } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-          <svg
-            className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-            fill="currentColor"
-            viewBox="0 0 100 100"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <polygon points="50,0 100,0 50,100 0,100" />
-          </svg>
+    <div className="relative min-h-screen flex flex-col items-center justify-center pt-32 pb-20 overflow-hidden bg-background">
+      
+      {/* Atmospheric Background */}
+      <div className="absolute inset-0 w-full h-full bg-atmospheric opacity-60 pointer-events-none"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-brand-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-          <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <div className="sm:text-center lg:text-left">
-              <h1 className="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Simplified Compliance</span>{' '}
-                <span className="block text-brand-600 xl:inline">& Security for SMEs</span>
-              </h1>
-              <p className="mt-3 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                Helping South African businesses navigate POPIA and secure their data without the complexity. Affordable, practical, and locally relevant solutions.
-              </p>
-              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                <div className="rounded-md shadow">
-                  <a
-                    href="#contact"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-600 hover:bg-brand-700 md:py-4 md:text-lg transition-all"
-                  >
-                    Free Consultation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
-                  <a
-                    href="#services"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-brand-700 bg-brand-100 hover:bg-brand-200 md:py-4 md:text-lg transition-all"
-                  >
-                    View Services
-                  </a>
-                </div>
-              </div>
-              
-              <div className="mt-8 flex items-center gap-4 text-sm text-slate-500 justify-center lg:justify-start">
-                <div className="flex items-center gap-1">
-                  <CheckCircle2 className="h-4 w-4 text-accent" />
-                  <span>POPIA Specialists</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <CheckCircle2 className="h-4 w-4 text-accent" />
-                  <span>SME Focused</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <CheckCircle2 className="h-4 w-4 text-accent" />
-                  <span>Remote-First</span>
-                </div>
-              </div>
-
-            </div>
-          </main>
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        {/* Availability Badge */}
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-12 animate-float">
+          <div className="w-1.5 h-1.5 rounded-full bg-brand-accent animate-pulse"></div>
+          <span className="text-[10px] font-bold text-white tracking-widest uppercase">Available for Consultation</span>
         </div>
-      </div>
-      <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-slate-100">
-        <img
-          className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full opacity-90"
-          src="https://picsum.photos/1200/800?grayscale"
-          alt="People working on laptops in a modern office"
-        />
-        <div className="absolute inset-0 bg-brand-900 mix-blend-multiply opacity-20"></div>
+
+        <h1 className="heading-huge text-white mb-8">
+          Structured Security <br/>
+          <span className="text-brand-accent text-glow-orange">
+            For Scalable Growth
+          </span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-slate-400 leading-relaxed mb-12 max-w-2xl mx-auto">
+          Supercharge your compliance workflow with automated cybersecurity solutions tailored for South African SMEs.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-24">
+          <a
+            href="#services"
+            className="px-10 py-4 rounded-full bg-white/5 border border-white/10 text-white font-bold text-xs tracking-widest uppercase transition-all hover:bg-white/10"
+          >
+            See our services
+          </a>
+          <a
+            href="#contact"
+            className="px-10 py-4 rounded-full bg-white text-black font-bold text-xs tracking-widest uppercase transition-all hover:bg-brand-accent hover:text-white"
+          >
+            Get in touch
+          </a>
+        </div>
+
+        {/* Feature Grid (Mini Cards) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+           <div className="glass-panel p-6 rounded-2xl text-left flex items-center gap-4 group hover:border-brand-accent/30 transition-all">
+              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-brand-accent">
+                 <Shield className="w-5 h-5" />
+              </div>
+              <div>
+                 <h3 className="text-white font-bold text-sm">POPIA Compliance</h3>
+                 <p className="text-slate-500 text-[10px] font-mono uppercase tracking-wider">100% Audit Ready</p>
+              </div>
+           </div>
+           <div className="glass-panel p-6 rounded-2xl text-left flex items-center gap-4 group hover:border-brand-accent/30 transition-all">
+              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-brand-accent">
+                 <Lock className="w-5 h-5" />
+              </div>
+              <div>
+                 <h3 className="text-white font-bold text-sm">Cyber Defense</h3>
+                 <p className="text-slate-500 text-[10px] font-mono uppercase tracking-wider">Enterprise Grade</p>
+              </div>
+           </div>
+           <div className="glass-panel p-6 rounded-2xl text-left flex items-center gap-4 group hover:border-brand-accent/30 transition-all">
+              <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-brand-accent">
+                 <Globe className="w-5 h-5" />
+              </div>
+              <div>
+                 <h3 className="text-white font-bold text-sm">Risk Analysis</h3>
+                 <p className="text-slate-500 text-[10px] font-mono uppercase tracking-wider">Real-time Monitoring</p>
+              </div>
+           </div>
+        </div>
+
       </div>
     </div>
   );
