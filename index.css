@@ -1,0 +1,11 @@
+/* Global styles */
+
+:root {
+  --brand-accent: #ff4e00;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
